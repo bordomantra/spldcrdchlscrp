@@ -19,7 +19,7 @@ impl DiscordApi {
         let response = self
             .request_with_relative_url_and_auth_header(
                 Method::GET,
-                &format!("channels/{channel_id}/messages?before={message_id}"),
+                &format!("channels/{channel_id}/messages?before={message_id}&limit=100"),
             )
             .await?;
 
